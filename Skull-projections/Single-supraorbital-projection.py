@@ -11,19 +11,19 @@ import csv
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Select the mesh to be used
-#src = mlab.pipeline.open("3D-models/model-70/Segmentation_70.stl")
+src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LAS.stl")
 #src = mlab.pipeline.open("3D-models/model-74/Segmentation_74-RAW.stl")
 #src = mlab.pipeline.open("3D-models/model-197/Segmentation_197-RAW.stl")
 #src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-RAW.stl")
-src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
+#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
 
 # List of file names to process
 file_names = [
 	        #'41 Supraorb python', 
-	        #'70 Supraorb python',
+	        '70 Supraorb python',
 	        #'74 Supraorb python',
             #'80 Supraorb python',
-	        '103 Supraorb python',
+	        #'103 Supraorb python',
 	        #'122 Supraorb python',
             #'197 Supraorb python',
 	    ]
@@ -74,7 +74,7 @@ for file_name in file_names:
 		x_tune_nose = 0
 		y_tune_nose = 0
 		z_tune_nose = 0
-		FRONTREF = [-51.115 , 12.991, -76.514], [55.548, 4.659, -77.545], [2.215 , 2.838, -108.046]
+		FRONTREF = [51.78400421142578, -73.97721862792969, 20.209863662719728], [-56.1229133605957, -76.30559539794922, 12.934329986572266], [-2.1589505672454836, -107.05281829833985, 14.846169471740723]
 
 	elif file_name ==  '74 Supraorb python':
 		x_tune_left_eye = 0
@@ -99,7 +99,7 @@ for file_name in file_names:
 		x_tune_nose = 0
 		y_tune_nose = 5
 		z_tune_nose = 2
-		FRONTREF = [-50.252, 15.891, -69.473], [59.464, 9.158, -62.605], [8.523, 5.419, -97.986]
+		FRONTREF = [-50.252, 69.473, 15.891], [59.464, 62.605, 9.158], [8.523, 97.986, 5.419]
 
 	elif file_name == '103 Supraorb python':
 		x_tune_left_eye = 0#2
@@ -227,7 +227,6 @@ for file_name in file_names:
 	abs_file_path = os.path.join(script_dir, rel_path)
 
 	new_points_df = pd.concat([new_points_df_right_side, new_points_df_left_side], axis=1)
-	print(new_points_df)
 	
     # Saving to a .cvs file for visualisation in Paraview if needed
 	new_points_df.to_csv(abs_file_path, index=False)
@@ -302,8 +301,7 @@ mlab.text(-80, 0, 'Intermediaal', z=60, width=0.2, color=(0.0, 0.0, 1.0))  # Blu
 mlab.text(-80, 0, 'Lateraal', z=80, width=0.2, color=(1.0, 0.0, 0.0))  # Red
 
 # Setting the desired orientation when the file is opened
-mlab.view(azimuth=0, elevation=180, distance=450)
+mlab.view(azimuth=0, elevation=0, distance=450)
 
 # Showing the plot
 mlab.show()
-print(lines_left_side)
