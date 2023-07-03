@@ -11,21 +11,25 @@ import csv
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Select the mesh to be used
-src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LAS.stl")
-#src = mlab.pipeline.open("3D-models/model-74/Segmentation_74-RAW.stl")
-#src = mlab.pipeline.open("3D-models/model-197/Segmentation_197-RAW.stl")
-#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-RAW.stl")
-#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
+#src = mlab.pipeline.open("3D-models/model-41/Segmentation_41-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-74/Segmentation_74-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-122/Segmentation_122-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-158/Segmentation_158-LPS.stl")
+src = mlab.pipeline.open("3D-models/model-197/Segmentation_197-LPS.stl")
 
 # List of file names to process
 file_names = [
-	        #'41 Supraorb python', 
-	        '70 Supraorb python',
-	        #'74 Supraorb python',
-            #'80 Supraorb python',
-	        #'103 Supraorb python',
-	        #'122 Supraorb python',
-            #'197 Supraorb python',
+	        #'41 Supraorb', 
+	        #'70 Supraorb',
+	        #'74 Supraorb',
+            #'80 Supraorb',
+	        #'103 Supraorb',
+	        #'122 Supraorb',
+			#'158 Supraorb',
+            '197 Supraorb'
 	    ]
 
 for file_name in file_names:
@@ -52,89 +56,101 @@ for file_name in file_names:
 	# Tuning the reference points by adding some offset, in this case to the Nose Point
 	x_tune_left_eye  = 0; y_tune_left_eye  = 0; z_tune_left_eye  = 0
 	x_tune_right_eye = 0; y_tune_right_eye = 0; z_tune_right_eye = 0
-	if   file_name == '41 Supraorb python':
-		x_tune_left_eye = 0    #
-		y_tune_left_eye = 5    #
-		z_tune_left_eye = 5    #
-		x_tune_right_eye = -10 #
-		y_tune_right_eye = -10 #
-		z_tune_right_eye = -14 #
+	if   file_name == '41 Supraorb':
+		x_tune_left_eye = 0   #
+		y_tune_left_eye = -2    #
+		z_tune_left_eye = 0   #
+		x_tune_right_eye = -2 #
+		y_tune_right_eye = 0 #
+		z_tune_right_eye = 0 #
 		x_tune_nose = 0
-		y_tune_nose = 0
+		y_tune_nose = 5
 		z_tune_nose = 0
+		FRONTREF = [55.25961685180664, -87.12602996826172, -135.50506591796876],[-56.16524124145508, -84.362548828125, -128.65228271484376],[1.966705322265625, -122.24573516845703, -138.52085876464845]
 		
-
-	elif file_name == '70 Supraorb python':
+	elif file_name == '70 Supraorb':
 		x_tune_left_eye = 0
-		y_tune_left_eye = 0 # needs further tuning (nerve start is in skull)
+		y_tune_left_eye = 0 
 		z_tune_left_eye = -2
 		x_tune_right_eye = 0
-		y_tune_right_eye = 0# needs further tuning (nerve start is in skull)
+		y_tune_right_eye = 0
 		z_tune_right_eye = -2
 		x_tune_nose = 0
 		y_tune_nose = 0
 		z_tune_nose = 0
 		FRONTREF = [51.78400421142578, -73.97721862792969, 20.209863662719728], [-56.1229133605957, -76.30559539794922, 12.934329986572266], [-2.1589505672454836, -107.05281829833985, 14.846169471740723]
 
-	elif file_name ==  '74 Supraorb python':
+	elif file_name ==  '74 Supraorb':
 		x_tune_left_eye = 0
-		y_tune_left_eye = 0  # needs further tuning (nerve start is in skull)
+		y_tune_left_eye = 0  
 		z_tune_left_eye = 0
-		x_tune_right_eye = 0#
-		y_tune_right_eye = 0 #
-		z_tune_right_eye = 0 #
+		x_tune_right_eye = 0
+		y_tune_right_eye = 0 
+		z_tune_right_eye = 0 
 		x_tune_nose = 0
 		y_tune_nose = 0
 		z_tune_nose = 0
-		FRONTREF = [-43.993892669677734, 16.352113723754883, -71.6380386352539],[57.692535400390625, 23.07497215270996, -67.5807876586914], [8.994501113891602, 16.31601333618164, -98.0703353881836]
+		FRONTREF = [44.21689224243164, -71.94463348388672, 14.214385986328125], [-58.45985412597656, -67.92092895507813, 20.508426666259767], [-8.899336814880371, -98.78041076660156, 13.033451080322266]
 
-
-	elif file_name == '80 Supraorb python':
-		x_tune_left_eye = -2
-		y_tune_left_eye = 0  # needs further tuning (nerve start is in skull)
-		z_tune_left_eye = 5
-		x_tune_right_eye = 5
-		y_tune_right_eye = 0 # needs further tuning (nerve start is in skull)
-		z_tune_right_eye = 2
-		x_tune_nose = 0
-		y_tune_nose = 5
-		z_tune_nose = 2
-		FRONTREF = [-50.252, 69.473, 15.891], [59.464, 62.605, 9.158], [8.523, 97.986, 5.419]
-
-	elif file_name == '103 Supraorb python':
-		x_tune_left_eye = 0#2
-		y_tune_left_eye = 0#2  # needs further tuning (nerve start is in skull)
-		z_tune_left_eye = 0#2
+	elif file_name == '80 Supraorb':
+		x_tune_left_eye = 0
+		y_tune_left_eye = 0  
+		z_tune_left_eye = 0
 		x_tune_right_eye = 0
-		y_tune_right_eye = 0 # needs further tuning (nerve start is in skull)
+		y_tune_right_eye = 0 
 		z_tune_right_eye = 0
 		x_tune_nose = 0
 		y_tune_nose = 0
 		z_tune_nose = 0
-		FRONTREF = [-54.901, 84.476, -19.076], [58.355 , 85.368, -17.154], [1.123, 114.725, -23.732]
+		FRONTREF = [50.04569625854492, -70.22789764404297, 13.373350143432618], [-59.88399124145508, -62.80413818359375, 9.427675247192383], [-8.124140739440918, -93.5909194946289, 6.681548118591309] 
 
-	elif file_name == '122 Supraorb python':
-		x_tune_left_eye = 12
-		y_tune_left_eye = 12 # needs further tuning (nerve start is in skull, red is floating)
-		z_tune_left_eye = 12
-		x_tune_right_eye = 15
-		y_tune_right_eye = 15 # needs further tuning (nerve start is in skull)
-		z_tune_right_eye = 15
-		x_tune_nose = 0
-		y_tune_nose = 0
-		z_tune_nose = 0
-
-	elif file_name == '197 Supraorb python':
+	elif file_name == '103 Supraorb':
 		x_tune_left_eye = 0
-		y_tune_left_eye = 0 # needs further tuning (nerve start is in skull, red is floating)
+		y_tune_left_eye = 0  
 		z_tune_left_eye = 0
 		x_tune_right_eye = 0
 		y_tune_right_eye = 0
-		z_tune_right_eye = 0 # needs further tuning (nerve start is too high)
+		z_tune_right_eye = 0
+		x_tune_nose = 0
+		y_tune_nose = 3
+		z_tune_nose = 0
+		FRONTREF = [55.579071044921878, -86.44158172607422, 24.30135726928711], [-59.00012969970703, -87.49335479736328, 25.803449630737306], [-1.1131476627790938, -115.92743167807599, 15.733926443472117]
+
+	elif file_name == '122 Supraorb':
+		x_tune_left_eye = 0
+		y_tune_left_eye = 0
+		z_tune_left_eye = 0
+		x_tune_right_eye = 0
+		y_tune_right_eye = 0
+		z_tune_right_eye = 0
+		x_tune_nose = 0
+		y_tune_nose = -2
+		z_tune_nose = 0
+		FRONTREF = [55.142173767089847, -44.00822448730469, -150.07098388671876], [-49.563716888427737, -37.93690872192383, -156.22598266601563], [0.7237986326217651, -72.89681243896485, -154.26702880859376]
+
+	elif file_name == '158 Supraorb':
+		x_tune_left_eye = 0
+		y_tune_left_eye = 0
+		z_tune_left_eye = 0
+		x_tune_right_eye = 0
+		y_tune_right_eye = 0
+		z_tune_right_eye = 0
 		x_tune_nose = 0
 		y_tune_nose = 0
 		z_tune_nose = 0
-		FRONTREF = [-53.9207763671875,21.398338317871094,-79.13076782226562], [56.770660400390625,19.90468406677246,-76.14810180664062],[1.6456568241119385,16.456398010253906,-99.5105209350586]
+		FRONTREF = [57.80643844604492, -88.92672729492188, -117.39237213134766], [-59.856101989746097, -86.77534484863281, -126.3244857788086], [-0.5251496434211731, -125.59642028808594, -120.52300262451172]
+
+	elif file_name == '197 Supraorb':
+		x_tune_left_eye = 0
+		y_tune_left_eye = 0
+		z_tune_left_eye = 0
+		x_tune_right_eye = 0
+		y_tune_right_eye = 0
+		z_tune_right_eye = 0 
+		x_tune_nose = 0
+		y_tune_nose = -2
+		z_tune_nose = 0
+		FRONTREF = [54.441688537597659, -83.47369384765625, 23.737031936645509], [-57.96451187133789, -80.4339828491211, 22.889888763427736], [-1.3099538087844849, -98.52961730957031, 21.30008888244629]
 
 	# Extracting reference points
 	right_eye = [old_reference_points.loc[0, 'x1_l'] + x_tune_right_eye , old_reference_points.loc[0, 'y1_l'] + y_tune_right_eye , old_reference_points.loc[0, 'z1_l'] + z_tune_right_eye]
@@ -287,13 +303,13 @@ for file_name in file_names:
 		pts = np.array(pts)
 		if len(pts) > 1:
 			line_color = color_mapping.get(color)
-			mlab.plot3d(pts[:, 0], pts[:, 1], pts[:, 2], color=line_color, tube_radius=1, opacity=0.2)
+			mlab.plot3d(pts[:, 0], pts[:, 1], pts[:, 2], color=line_color, tube_radius=1.5, opacity=0.2)
 
 	for color, pts in points_left_side.items():
 		pts = np.array(pts)
 		if len(pts) > 1:
 			line_color = color_mapping.get(color)
-			mlab.plot3d(pts[:, 0], pts[:, 1], pts[:, 2], color=line_color, tube_radius=1, opacity=0.2)
+			mlab.plot3d(pts[:, 0], pts[:, 1], pts[:, 2], color=line_color, tube_radius=1.5, opacity=0.2)
 
 # Adding a custom legend using text annotations
 mlab.text(-80, 0, 'Mediaal', z=40, width=0.2, color=(0.0, 1.0, 0.0))  # Green
@@ -301,7 +317,7 @@ mlab.text(-80, 0, 'Intermediaal', z=60, width=0.2, color=(0.0, 0.0, 1.0))  # Blu
 mlab.text(-80, 0, 'Lateraal', z=80, width=0.2, color=(1.0, 0.0, 0.0))  # Red
 
 # Setting the desired orientation when the file is opened
-mlab.view(azimuth=0, elevation=0, distance=450)
+mlab.view(azimuth=0, elevation=90, distance=450)
 
 # Showing the plot
 mlab.show()
