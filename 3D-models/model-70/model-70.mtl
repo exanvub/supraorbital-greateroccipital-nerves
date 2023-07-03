@@ -1,0 +1,149 @@
+# wavefront mtl file written by the visualization toolkit
+
+newmtl mtl1
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ns 1
+Tr 1
+illum 3
+newmtl mtl38357
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38375
+Ka 0 0 0
+Kd 0 1 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38405
+Ka 0 0 0
+Kd 0 0 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38435
+Ka 0 0 0
+Kd 1 0 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38465
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38483
+Ka 0 0 0
+Kd 0 1 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38513
+Ka 0 0 0
+Kd 0 0 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38543
+Ka 0 0 0
+Kd 1 0 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38573
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38591
+Ka 0 0 0
+Kd 0 1 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38609
+Ka 0 0 0
+Kd 1 1 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38639
+Ka 0 0 0
+Kd 1 0 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38651
+Ka 0 0 0
+Kd 0 1 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38669
+Ka 0 0 0
+Kd 0 0 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38687
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38705
+Ka 0 0 0
+Kd 0 1 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38723
+Ka 0 0 0
+Kd 1 1 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38753
+Ka 0 0 0
+Kd 1 0 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38765
+Ka 0 0 0
+Kd 0 1 0
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3
+newmtl mtl38783
+Ka 0 0 0
+Kd 0 0 1
+Ks 0 0 0
+Ns 1
+Tr 0.6
+illum 3

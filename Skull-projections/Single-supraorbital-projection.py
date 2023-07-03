@@ -11,9 +11,9 @@ import csv
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Select the mesh to be used
-src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
+#src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 #src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-74/Segmentation_74-LPS.stl")
+src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
 #src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122-LPS.stl")
@@ -22,14 +22,16 @@ src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 
 # List of file names to process
 file_names = [
-	        '41 Supraorb', 
+	        #'41 Supraorb', 
 	        #'70 Supraorb',
-	        #'74 Supraorb',
+	        '74 Supraorb',
             #'80 Supraorb',
 	        #'103 Supraorb',
 	        #'122 Supraorb',
 			#'158 Supraorb',
-            #'197 Supraorb'
+            #'197 Supraorb',
+			#'74 Supraorb copy'
+
 	    ]
 
 for file_name in file_names:
@@ -82,12 +84,23 @@ for file_name in file_names:
 
 	elif file_name ==  '74 Supraorb':
 		x_tune_left_eye = 0
-		y_tune_left_eye = 0  
+		y_tune_left_eye = -4  
 		z_tune_left_eye = 0
 		x_tune_right_eye = 0
 		y_tune_right_eye = 0 
 		z_tune_right_eye = 0 
-		x_tune_nose = 0
+		x_tune_nose = -3
+		y_tune_nose = 0
+		z_tune_nose = 0
+		FRONTREF = [44.21689224243164, -71.94463348388672, 14.214385986328125], [-58.45985412597656, -67.92092895507813, 20.508426666259767], [-8.899336814880371, -98.78041076660156, 13.033451080322266]
+	elif file_name ==  '74 Supraorb copy':
+		x_tune_left_eye = 0
+		y_tune_left_eye = -4  
+		z_tune_left_eye = 0
+		x_tune_right_eye = 0
+		y_tune_right_eye = 0 
+		z_tune_right_eye = 0 
+		x_tune_nose = -3
 		y_tune_nose = 0
 		z_tune_nose = 0
 		FRONTREF = [44.21689224243164, -71.94463348388672, 14.214385986328125], [-58.45985412597656, -67.92092895507813, 20.508426666259767], [-8.899336814880371, -98.78041076660156, 13.033451080322266]

@@ -11,9 +11,9 @@ import csv
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Select the mesh to be used
-src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
+#src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 #src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-74/Segmentation_74-LPS.stl")
+src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
 #src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122-LPS.stl")
@@ -22,12 +22,12 @@ src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 
 # List of file names to process
 file_names = [
-			'41 occip',
+			#'41 occip',
 			#'70 occip',
-			#'74 occip',
-			#'80 occip'
+			'74 occip',
+			#'80 occip',
 			#'103 occip',
-			#'122 occip'
+			#'122 occip',
 			#'158 occip',
 			#'197 occip',
 	    ]
@@ -91,7 +91,7 @@ for file_name in file_names:
 		x_tune_occip = 0
 		y_tune_occip = 0
 		z_tune_occip = 0
-		BACKREF = [63.61101150512695, 50.00296401977539, -172.4718780517578], [-53.986854553222659, 53.37822723388672, -176.2224578857422], [4.411401271820068, 111.36182403564453, -143.51705932617188]
+		BACKREF = [64.8817138671875, 16.336185455322267, -2.6865735054016115], [-60.832662957369787, 24.111304395854217, -0.05597632108217979], [3.7241039276123049, 83.88286590576172, 36.02830123901367]
 
 
 	elif file_name == '80 occip':
