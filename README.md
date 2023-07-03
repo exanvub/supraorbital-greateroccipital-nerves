@@ -19,7 +19,7 @@ The models are available in both original colors and grayscale, depending on the
 
 The models can be viewed directly in the GitHub UI by clicking on the .stl files. GitHub provides a 3D viewer that allows you to interact with the models, zooming in, rotating, and inspecting them from different angles.
 
-For a more comprehensive viewing experience, you can download the 3D models and view them in a software program of your choice. One recommended program is MeshLab, which is a free and open-source software widely used for 3D model visualization and editing. You can download MeshLab from their official website [here](https://www.meshlab.net/).
+For a more comprehensive viewing experience, you can download the 3D models and view them in a software program of your choice. One recommended program is MeshLab, which is a free and open-source software widely used for 3D model visualization and editing. You can download MeshLab from their official website [here](https://www.meshlab.net/).Or use an online 3D viewer such as [3dviewer](https://3dviewer.net).
 
 To view the downloaded models in MeshLab:
 
