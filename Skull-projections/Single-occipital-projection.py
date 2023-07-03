@@ -11,22 +11,22 @@ import csv
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Select the mesh to be used
-#src = mlab.pipeline.open("3D-models/model-41/Segmentation_41-LPS.stl")
+src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 #src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-74/Segmentation_74-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
-src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-158/Segmentation_158-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-197/Segmentation_197-LPS.stl")
 
 # List of file names to process
 file_names = [
-			#'41 occip',
+			'41 occip',
 			#'70 occip',
 			#'74 occip',
 			#'80 occip'
-			'103 occip',
+			#'103 occip',
 			#'122 occip'
 			#'158 occip',
 			#'197 occip',

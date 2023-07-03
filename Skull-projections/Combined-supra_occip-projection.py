@@ -38,7 +38,7 @@ file_names = [
 	    ]
 
 # Select the mesh to be used
-src = mlab.pipeline.open("3D-models/model-41/Segmentation_41-LPS.stl")
+src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 #src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-74/Segmentation_74-LPS.stl")
 #src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
