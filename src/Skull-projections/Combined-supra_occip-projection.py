@@ -17,8 +17,8 @@ file_names = [
 	        #'70 Supraorb',
             #'70 occip',
 
-	        '74 Supraorb',
-            '74 occip',
+	        #'74 Supraorb',
+            #'74 occip',
 
 
             #'80 Supraorb',
@@ -33,19 +33,19 @@ file_names = [
 			#'158 Supraorb',
 			#'158 occip',
 			
-            #'197 Supraorb',
-            #'197 occip',
+            '197 Supraorb',
+            '197 occip',
 	    ]
-
+#
 # Select the mesh to be used
 #src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 #src = mlab.pipeline.open("3D-models/model-70/Segmentation_70.stl")
-src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
-#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-122/Segmentation_122-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-158/Segmentation_158-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-197/Segmentation_197-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
+#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80.stl")
+#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
+#src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
+#src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
+src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
 
 # Loading mesh data from .STL file
 

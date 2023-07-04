@@ -13,23 +13,23 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 # Select the mesh to be used
 #src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 #src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LPS.stl")
-src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
-#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-122/Segmentation_122-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-158/Segmentation_158-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-197/Segmentation_197-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
+#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80.stl")
+#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
+#src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
+#src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
+src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
 
 # List of file names to process
 file_names = [
 			#'41 occip',
 			#'70 occip',
-			'74 occip',
+			#'74 occip',
 			#'80 occip',
 			#'103 occip',
 			#'122 occip',
 			#'158 occip',
-			#'197 occip',
+			'197 occip',
 	    ]
 
 for file_name in file_names:
@@ -95,8 +95,8 @@ for file_name in file_names:
 
 
 	elif file_name == '80 occip':
-		x_tune_left_mast = -5
-		y_tune_left_mast = 0 
+		x_tune_left_mast = -2
+		y_tune_left_mast = 5 
 		z_tune_left_mast = 0
 		x_tune_right_mast = 0
 		y_tune_right_mast = 0
@@ -147,10 +147,10 @@ for file_name in file_names:
 		y_tune_left_mast = -5
 		z_tune_left_mast = 0
 		x_tune_right_mast = 0
-		y_tune_right_mast = -10
+		y_tune_right_mast = -15
 		z_tune_right_mast = 0
 		x_tune_occip = 0
-		y_tune_occip = 0
+		y_tune_occip = 5
 		z_tune_occip = 0
 		BACKREF = [60.52559280395508, 8.54175853729248, -9.985729217529297], [-58.57665252685547, 7.98490571975708, -4.698486328125], [7.323022842407227, 83.48851776123047, 29.42506980895996]
 

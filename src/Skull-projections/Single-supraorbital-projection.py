@@ -13,23 +13,23 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 # Select the mesh to be used
 #src = mlab.pipeline.open("3D-models/model-41/Segmentation_41.stl")
 #src = mlab.pipeline.open("3D-models/model-70/Segmentation_70-LPS.stl")
-src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
-#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-122/Segmentation_122-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-158/Segmentation_158-LPS.stl")
-#src = mlab.pipeline.open("3D-models/model-197/Segmentation_197-LPS.stl")
+#src = mlab.pipeline.open("3D-models/model-74/Segmentation_74.stl")
+#src = mlab.pipeline.open("3D-models/model-80/Segmentation_80.stl")
+#src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
+#src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
+#src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
+src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
 
 # List of file names to process
 file_names = [
 	        #'41 Supraorb', 
 	        #'70 Supraorb',
-	        '74 Supraorb',
+	        #'74 Supraorb',
             #'80 Supraorb',
 	        #'103 Supraorb',
 	        #'122 Supraorb',
 			#'158 Supraorb',
-            #'197 Supraorb',
+            '197 Supraorb',
 			#'74 Supraorb copy'
 
 	    ]
@@ -93,33 +93,22 @@ for file_name in file_names:
 		y_tune_nose = 0
 		z_tune_nose = 0
 		FRONTREF = [44.21689224243164, -71.94463348388672, 14.214385986328125], [-58.45985412597656, -67.92092895507813, 20.508426666259767], [-8.899336814880371, -98.78041076660156, 13.033451080322266]
-	elif file_name ==  '74 Supraorb copy':
-		x_tune_left_eye = 0
-		y_tune_left_eye = -4  
-		z_tune_left_eye = 0
-		x_tune_right_eye = 0
-		y_tune_right_eye = 0 
-		z_tune_right_eye = 0 
-		x_tune_nose = -3
-		y_tune_nose = 0
-		z_tune_nose = 0
-		FRONTREF = [44.21689224243164, -71.94463348388672, 14.214385986328125], [-58.45985412597656, -67.92092895507813, 20.508426666259767], [-8.899336814880371, -98.78041076660156, 13.033451080322266]
 
 	elif file_name == '80 Supraorb':
 		x_tune_left_eye = 0
 		y_tune_left_eye = 0  
 		z_tune_left_eye = 0
 		x_tune_right_eye = 0
-		y_tune_right_eye = 0 
+		y_tune_right_eye = -2
 		z_tune_right_eye = 0
-		x_tune_nose = 0
-		y_tune_nose = 0
-		z_tune_nose = 0
+		x_tune_nose = -2
+		y_tune_nose = -4
+		z_tune_nose = -4
 		FRONTREF = [50.04569625854492, -70.22789764404297, 13.373350143432618], [-59.88399124145508, -62.80413818359375, 9.427675247192383], [-8.124140739440918, -93.5909194946289, 6.681548118591309] 
 
 	elif file_name == '103 Supraorb':
 		x_tune_left_eye = 0
-		y_tune_left_eye = 0  
+		y_tune_left_eye = 0
 		z_tune_left_eye = 0
 		x_tune_right_eye = 0
 		y_tune_right_eye = 0
@@ -143,15 +132,16 @@ for file_name in file_names:
 
 	elif file_name == '158 Supraorb':
 		x_tune_left_eye = 0
-		y_tune_left_eye = 0
+		y_tune_left_eye = -2
 		z_tune_left_eye = 0
 		x_tune_right_eye = 0
-		y_tune_right_eye = 0
+		y_tune_right_eye = -2
 		z_tune_right_eye = 0
 		x_tune_nose = 0
-		y_tune_nose = 0
+		y_tune_nose = 2
 		z_tune_nose = 0
-		FRONTREF = [57.80643844604492, -88.92672729492188, -117.39237213134766], [-59.856101989746097, -86.77534484863281, -126.3244857788086], [-0.5251496434211731, -125.59642028808594, -120.52300262451172]
+		FRONTREF = [-58.73886489868164, -88.28600311279297, -125.75379943847656], [56.73569107055664, -89.95687103271485, -116.94060516357422], [0.688157856464386, -125.81101989746094, -121.0814437866211]
+
 
 	elif file_name == '197 Supraorb':
 		x_tune_left_eye = 0
