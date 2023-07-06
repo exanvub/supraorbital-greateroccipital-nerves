@@ -33,8 +33,11 @@ file_names = [
 			#'158 Supraorb',
 			#'158 occip',
 			
-            '197 Supraorb',
-            '197 occip',
+            #'197 Supraorb',
+            #'197 occip',
+	    
+			'183 Supraorb_mean',
+			'183 occip_mean'
 	    ]
 #
 # Select the mesh to be used
@@ -45,7 +48,8 @@ file_names = [
 #src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
 #src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
-src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
+#src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
+src = mlab.pipeline.open("3D-models/model-183/Segmentation_183.stl")
 
 # Loading mesh data from .STL file
 

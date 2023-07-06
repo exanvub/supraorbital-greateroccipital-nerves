@@ -18,7 +18,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 #src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
 #src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
-src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
+#src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
+src = mlab.pipeline.open("3D-models/model-183/Segmentation_183.stl")
 
 # List of file names to process
 file_names = [
@@ -29,7 +30,8 @@ file_names = [
 			#'103 occip',
 			#'122 occip',
 			#'158 occip',
-			'197 occip',
+			#'197 occip',
+			'183 occip_mean',
 	    ]
 
 for file_name in file_names:
@@ -154,6 +156,17 @@ for file_name in file_names:
 		z_tune_occip = 0
 		BACKREF = [60.52559280395508, 8.54175853729248, -9.985729217529297], [-58.57665252685547, 7.98490571975708, -4.698486328125], [7.323022842407227, 83.48851776123047, 29.42506980895996]
 
+	elif file_name == '183 occip_mean':
+		x_tune_left_mast = 0
+		y_tune_left_mast = 0
+		z_tune_left_mast = 0
+		x_tune_right_mast = 0
+		y_tune_right_mast = 0
+		z_tune_right_mast = 0
+		x_tune_occip = 0
+		y_tune_occip = -5
+		z_tune_occip = 0
+		BACKREF = [70.26861572265625, 46.73390579223633, -122.1737289428711], [-66.59005737304688, 57.29148483276367, -129.66197204589845],[3.8471922874450685, 108.10774993896485, -104.57086944580078]
 
 	# Extracting and tuning reference points
 	left_mast = [old_reference_points.loc[0, 'x1_l'] + x_tune_right_mast , old_reference_points.loc[0, 'y1_l'] + y_tune_right_mast , old_reference_points.loc[0, 'z1_l'] + z_tune_right_mast]

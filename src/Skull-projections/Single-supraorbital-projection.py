@@ -18,7 +18,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 #src = mlab.pipeline.open("3D-models/model-103/Segmentation_103.stl")
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
 #src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
-src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
+#src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
+src = mlab.pipeline.open("3D-models/model-183/Segmentation_183.stl")
 
 # List of file names to process
 file_names = [
@@ -29,8 +30,9 @@ file_names = [
 	        #'103 Supraorb',
 	        #'122 Supraorb',
 			#'158 Supraorb',
-            '197 Supraorb',
+            #'197 Supraorb',
 			#'74 Supraorb copy'
+			'183 Supraorb_mean'
 
 	    ]
 
@@ -154,6 +156,18 @@ for file_name in file_names:
 		y_tune_nose = -2
 		z_tune_nose = 0
 		FRONTREF = [54.441688537597659, -83.47369384765625, 23.737031936645509], [-57.96451187133789, -80.4339828491211, 22.889888763427736], [-1.3099538087844849, -98.52961730957031, 21.30008888244629]
+
+	elif file_name == '183 Supraorb_mean':
+		x_tune_left_eye = 0
+		y_tune_left_eye = 0
+		z_tune_left_eye = 0
+		x_tune_right_eye = 0
+		y_tune_right_eye = 0
+		z_tune_right_eye = 0 
+		x_tune_nose = 0
+		y_tune_nose = 0
+		z_tune_nose = 2
+		FRONTREF = [47.20527648925781, -37.847286224365237, -126.96367645263672], [-62.0014762878418, -28.19467544555664, -131.5848846435547],[-11.892558097839356, -64.7929458618164, -133.689453125]
 
 	# Extracting reference points
 	right_eye = [old_reference_points.loc[0, 'x1_l'] + x_tune_right_eye , old_reference_points.loc[0, 'y1_l'] + y_tune_right_eye , old_reference_points.loc[0, 'z1_l'] + z_tune_right_eye]
