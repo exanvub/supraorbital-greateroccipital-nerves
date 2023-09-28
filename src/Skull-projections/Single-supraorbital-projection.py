@@ -19,7 +19,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
 #src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
 #src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
-src = mlab.pipeline.open("3D-models/model-183/Segmentation_183.stl")
+#src = mlab.pipeline.open("3D-models/model-183/Segmentation_183.stl")
+src = mlab.pipeline.open("/Users/nicolas/Library/CloudStorage/OneDrive-VrijeUniversiteitBrussel/Github/exanvub/supraorbital-greateroccipital-nerves/3D-models/model-157/Segmentation_157.stl")
 
 # List of file names to process
 file_names = [
@@ -32,7 +33,8 @@ file_names = [
 			#'158 Supraorb',
             #'197 Supraorb',
 			#'74 Supraorb copy'
-			'183 Supraorb_mean'
+			#'183 Supraorb_mean'
+			'157 Supraorb'
 
 	    ]
 
@@ -168,6 +170,18 @@ for file_name in file_names:
 		y_tune_nose = 0
 		z_tune_nose = 2
 		FRONTREF = [47.20527648925781, -37.847286224365237, -126.96367645263672], [-62.0014762878418, -28.19467544555664, -131.5848846435547],[-11.892558097839356, -64.7929458618164, -133.689453125]
+
+	elif file_name == '157 Supraorb':
+		x_tune_left_eye = 0
+		y_tune_left_eye = 0
+		z_tune_left_eye = 0
+		x_tune_right_eye = 0
+		y_tune_right_eye = 0
+		z_tune_right_eye = 0 
+		x_tune_nose = 0
+		y_tune_nose = 0
+		z_tune_nose = 0
+		FRONTREF = [52.546730041503909, -29.94740104675293, -161.69195556640626], [-60.08198547363281, -19.36564826965332, -170.63943481445313],[-3.9057843685150148, -56.53491973876953, -177.9247283935547]
 
 	# Extracting reference points
 	right_eye = [old_reference_points.loc[0, 'x1_l'] + x_tune_right_eye , old_reference_points.loc[0, 'y1_l'] + y_tune_right_eye , old_reference_points.loc[0, 'z1_l'] + z_tune_right_eye]
