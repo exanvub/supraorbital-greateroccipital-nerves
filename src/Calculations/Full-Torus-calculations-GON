@@ -1,0 +1,546 @@
+import json
+import numpy as np
+
+
+# Load JSON data from file
+with open('/Users/nicolas/Library/CloudStorage/OneDrive-VrijeUniversiteitBrussel/Onderzoek/n supraorbi occipitalis major/3D-models/Full Tori GON/103-Full-Tori-GON-R.mrk.json', 'r') as file:
+    data = json.load(file)
+
+# Extract markups data
+markups_data = data['markups'][0]['controlPoints']
+
+# Create variables for each label with the corresponding position
+for markup in markups_data:
+    label = markup['label']
+    position = markup['position']
+    
+    # Create variables dynamically as NumPy arrays
+    globals()[label.replace('-', '_')] = np.array(position)
+
+# Print all labels and their positions
+for markup in markups_data:
+    label = markup['label']
+    variable_name = label.replace('-', '_')
+    position = globals().get(variable_name)
+
+    if position is not None:
+        print(f"Position of {label}: {position}")
+    else:
+        print(f"Variable {variable_name} not defined.")
+
+print("level _2")
+
+# Calculate Euclidean distance between c_2, p_2, and gon_2
+if 'c_2' in globals() and 'p_2' in globals() and 'gon_2' in globals():
+    distance = np.linalg.norm(c_2 - p_2) + np.linalg.norm(p_2 - gon_2)
+    print(distance)
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_2, p_2, and med_2
+if 'c_2' in globals() and 'p_2' in globals() and 'med_2' in globals():
+    distance = np.linalg.norm(c_2 - p_2) + np.linalg.norm(p_2 - med_2)
+    print(distance)
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_2, p_2, and lat_2
+if 'c_2' in globals() and 'p_2' in globals() and 'lat_2' in globals():
+    distance = np.linalg.norm(c_2 - p_2) + np.linalg.norm(p_2 - lat_2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_2, p_2, and latmed_2
+if 'c_2' in globals() and 'p_2' in globals() and 'latmed_2' in globals():
+    distance = np.linalg.norm(c_2 - p_2) + np.linalg.norm(p_2 - latmed_2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_2, p_2, and latlat_2
+if 'c_2' in globals() and 'p_2' in globals() and 'latlat_2' in globals():
+    distance = np.linalg.norm(c_2 - p_2) + np.linalg.norm(p_2 - latlat_2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level _1")
+
+# Calculate Euclidean distance between c_1, p_1, and gon_1
+if 'c_1' in globals() and 'p_1' in globals() and 'gon_1' in globals():
+    distance = np.linalg.norm(c_1 - p_1) + np.linalg.norm(p_1 - gon_1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_1, p_1, and med_1
+if 'c_1' in globals() and 'p_1' in globals() and 'med_1' in globals():
+    distance = np.linalg.norm(c_1 - p_1) + np.linalg.norm(p_1 - med_1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_1, p_1, and lat_1
+if 'c_1' in globals() and 'p_1' in globals() and 'lat_1' in globals():
+    distance = np.linalg.norm(c_1 - p_1) + np.linalg.norm(p_1 - lat_1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_1, p_1, and latmed_1
+if 'c_1' in globals() and 'p_1' in globals() and 'latmed_1' in globals():
+    distance = np.linalg.norm(c_1 - p_1) + np.linalg.norm(p_1 - latmed_1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c_1, p_1, and latlat_1
+if 'c_1' in globals() and 'p_1' in globals() and 'latlat_1' in globals():
+    distance = np.linalg.norm(c_1 - p_1) + np.linalg.norm(p_1 - latlat_1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 0")
+
+# Calculate Euclidean distance between c0, p0, and gon0
+if 'c0' in globals() and 'p0' in globals() and 'gon0' in globals():
+    distance = np.linalg.norm(c0 - p0) + np.linalg.norm(p0 - gon0)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c0, p0, and med0
+if 'c0' in globals() and 'p0' in globals() and 'med0' in globals():
+    distance = np.linalg.norm(c0 - p0) + np.linalg.norm(p0 - med0)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c0, p0, and lat0
+if 'c0' in globals() and 'p0' in globals() and 'lat0' in globals():
+    distance = np.linalg.norm(c0 - p0) + np.linalg.norm(p0 - lat0)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c0, p0, and latmed0
+if 'c0' in globals() and 'p0' in globals() and 'latmed0' in globals():
+    distance = np.linalg.norm(c0 - p0) + np.linalg.norm(p0 - latmed0)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c0, p0, and latlat0
+if 'c0' in globals() and 'p0' in globals() and 'latlat0' in globals():
+    distance = np.linalg.norm(c0 - p0) + np.linalg.norm(p0 - latlat0)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 1")
+
+# Calculate Euclidean distance between c1, p1, and gon1
+if 'c1' in globals() and 'p1' in globals() and 'gon1' in globals():
+    distance = np.linalg.norm(c1 - p1) + np.linalg.norm(p1 - gon1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c1, p1, and med1
+if 'c1' in globals() and 'p1' in globals() and 'med1' in globals():
+    distance = np.linalg.norm(c1 - p1) + np.linalg.norm(p1 - med1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c1, p1, and lat1
+if 'c1' in globals() and 'p1' in globals() and 'lat1' in globals():
+    distance = np.linalg.norm(c1 - p1) + np.linalg.norm(p1 - lat1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c1, p1, and latmed1
+if 'c1' in globals() and 'p1' in globals() and 'latmed1' in globals():
+    distance = np.linalg.norm(c1 - p1) + np.linalg.norm(p1 - latmed1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c1, p1, and latlat1
+if 'c1' in globals() and 'p1' in globals() and 'latlat1' in globals():
+    distance = np.linalg.norm(c1 - p1) + np.linalg.norm(p1 - latlat1)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 2")
+
+# Calculate Euclidean distance between c2, p2, and gon2
+if 'c2' in globals() and 'p2' in globals() and 'gon2' in globals():
+    distance = np.linalg.norm(c2 - p2) + np.linalg.norm(p2 - gon2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c2, p2, and med2
+if 'c2' in globals() and 'p2' in globals() and 'med2' in globals():
+    distance = np.linalg.norm(c2 - p2) + np.linalg.norm(p2 - med2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c2, p2, and lat2
+if 'c2' in globals() and 'p2' in globals() and 'lat2' in globals():
+    distance = np.linalg.norm(c2 - p2) + np.linalg.norm(p2 - lat2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c2, p2, and latmed2
+if 'c2' in globals() and 'p2' in globals() and 'latmed2' in globals():
+    distance = np.linalg.norm(c2 - p2) + np.linalg.norm(p2 - latmed2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c2, p2, and latlat2
+if 'c2' in globals() and 'p2' in globals() and 'latlat2' in globals():
+    distance = np.linalg.norm(c2 - p2) + np.linalg.norm(p2 - latlat2)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 3")
+
+# Calculate Euclidean distance between c3, p3, and gon3
+if 'c3' in globals() and 'p3' in globals() and 'gon3' in globals():
+    distance = np.linalg.norm(c3 - p3) + np.linalg.norm(p3 - gon3)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c3, p3, and med3
+if 'c3' in globals() and 'p3' in globals() and 'med3' in globals():
+    distance = np.linalg.norm(c3 - p3) + np.linalg.norm(p3 - med3)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c3, p3, and lat3
+if 'c3' in globals() and 'p3' in globals() and 'lat3' in globals():
+    distance = np.linalg.norm(c3 - p3) + np.linalg.norm(p3 - lat3)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c3, p3, and latmed3
+if 'c3' in globals() and 'p3' in globals() and 'latmed3' in globals():
+    distance = np.linalg.norm(c3 - p3) + np.linalg.norm(p3 - latmed3)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c3, p3, and latlat3
+if 'c3' in globals() and 'p3' in globals() and 'latlat3' in globals():
+    distance = np.linalg.norm(c3 - p3) + np.linalg.norm(p3 - latlat3)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 4")
+
+# Calculate Euclidean distance between c4, p4, and gon4
+if 'c4' in globals() and 'p4' in globals() and 'gon4' in globals():
+    distance = np.linalg.norm(c4 - p4) + np.linalg.norm(p4 - gon4)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c4, p4, and med4
+if 'c4' in globals() and 'p4' in globals() and 'med4' in globals():
+    distance = np.linalg.norm(c4 - p4) + np.linalg.norm(p4 - med4)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c4, p4, and lat4
+if 'c4' in globals() and 'p4' in globals() and 'lat4' in globals():
+    distance = np.linalg.norm(c4 - p4) + np.linalg.norm(p4 - lat4)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c4, p4, and latmed4
+if 'c4' in globals() and 'p4' in globals() and 'latmed4' in globals():
+    distance = np.linalg.norm(c4 - p4) + np.linalg.norm(p4 - latmed4)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c4, p4, and latlat4
+if 'c4' in globals() and 'p4' in globals() and 'latlat4' in globals():
+    distance = np.linalg.norm(c4 - p4) + np.linalg.norm(p4 - latlat4)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 5")
+
+# Calculate Euclidean distance between c5, p5, and gon5
+if 'c5' in globals() and 'p5' in globals() and 'gon5' in globals():
+    distance = np.linalg.norm(c5 - p5) + np.linalg.norm(p5 - gon5)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c5, p5, and med5
+if 'c5' in globals() and 'p5' in globals() and 'med5' in globals():
+    distance = np.linalg.norm(c5 - p5) + np.linalg.norm(p5 - med5)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c5, p5, and lat5
+if 'c5' in globals() and 'p5' in globals() and 'lat5' in globals():
+    distance = np.linalg.norm(c5 - p5) + np.linalg.norm(p5 - lat5)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c5, p5, and latmed5
+if 'c5' in globals() and 'p5' in globals() and 'latmed5' in globals():
+    distance = np.linalg.norm(c5 - p5) + np.linalg.norm(p5 - latmed5)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c5, p5, and latlat5
+if 'c5' in globals() and 'p5' in globals() and 'latlat5' in globals():
+    distance = np.linalg.norm(c5 - p5) + np.linalg.norm(p5 - latlat5)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 6")
+
+# Calculate Euclidean distance between c6, p6, and gon6
+if 'c6' in globals() and 'p6' in globals() and 'gon6' in globals():
+    distance = np.linalg.norm(c6 - p6) + np.linalg.norm(p6 - gon6)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c6, p6, and med6
+if 'c6' in globals() and 'p6' in globals() and 'med6' in globals():
+    distance = np.linalg.norm(c6 - p6) + np.linalg.norm(p6 - med6)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c6, p6, and lat6
+if 'c6' in globals() and 'p6' in globals() and 'lat6' in globals():
+    distance = np.linalg.norm(c6 - p6) + np.linalg.norm(p6 - lat6)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c6, p6, and latmed6
+if 'c6' in globals() and 'p6' in globals() and 'latmed6' in globals():
+    distance = np.linalg.norm(c6 - p6) + np.linalg.norm(p6 - latmed6)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c6, p6, and latlat6
+if 'c6' in globals() and 'p6' in globals() and 'latlat6' in globals():
+    distance = np.linalg.norm(c6 - p6) + np.linalg.norm(p6 - latlat6)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 7")
+
+# Calculate Euclidean distance between c7, p7, and gon7
+if 'c7' in globals() and 'p7' in globals() and 'gon7' in globals():
+    distance = np.linalg.norm(c7 - p7) + np.linalg.norm(p7 - gon7)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c7, p7, and med7
+if 'c7' in globals() and 'p7' in globals() and 'med7' in globals():
+    distance = np.linalg.norm(c7 - p7) + np.linalg.norm(p7 - med7)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c7, p7, and lat7
+if 'c7' in globals() and 'p7' in globals() and 'lat7' in globals():
+    distance = np.linalg.norm(c7 - p7) + np.linalg.norm(p7 - lat7)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c7, p7, and latmed7
+if 'c7' in globals() and 'p7' in globals() and 'latmed7' in globals():
+    distance = np.linalg.norm(c7 - p7) + np.linalg.norm(p7 - latmed7)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c7, p7, and latlat7
+if 'c7' in globals() and 'p7' in globals() and 'latlat7' in globals():
+    distance = np.linalg.norm(c7 - p7) + np.linalg.norm(p7 - latlat7)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 8")
+
+# Calculate Euclidean distance between c8, p8, and gon8
+if 'c8' in globals() and 'p8' in globals() and 'gon8' in globals():
+    distance = np.linalg.norm(c8 - p8) + np.linalg.norm(p8 - gon8)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c8, p8, and med8
+if 'c8' in globals() and 'p8' in globals() and 'med8' in globals():
+    distance = np.linalg.norm(c8 - p8) + np.linalg.norm(p8 - med8)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c8, p8, and lat8
+if 'c8' in globals() and 'p8' in globals() and 'lat8' in globals():
+    distance = np.linalg.norm(c8 - p8) + np.linalg.norm(p8 - lat8)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c8, p8, and latmed8
+if 'c8' in globals() and 'p8' in globals() and 'latmed8' in globals():
+    distance = np.linalg.norm(c8 - p8) + np.linalg.norm(p8 - latmed8)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c8, p8, and latlat8
+if 'c8' in globals() and 'p8' in globals() and 'latlat8' in globals():
+    distance = np.linalg.norm(c8 - p8) + np.linalg.norm(p8 - latlat8)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 9")
+
+# Calculate Euclidean distance between c9, p9, and gon9
+if 'c9' in globals() and 'p9' in globals() and 'gon9' in globals():
+    distance = np.linalg.norm(c9 - p9) + np.linalg.norm(p9 - gon9)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c9, p9, and med9
+if 'c9' in globals() and 'p9' in globals() and 'med9' in globals():
+    distance = np.linalg.norm(c9 - p9) + np.linalg.norm(p9 - med9)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c9, p9, and lat9
+if 'c9' in globals() and 'p9' in globals() and 'lat9' in globals():
+    distance = np.linalg.norm(c9 - p9) + np.linalg.norm(p9 - lat9)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c9, p9, and latmed9
+if 'c9' in globals() and 'p9' in globals() and 'latmed9' in globals():
+    distance = np.linalg.norm(c9 - p9) + np.linalg.norm(p9 - latmed9)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c9, p9, and latlat9
+if 'c9' in globals() and 'p9' in globals() and 'latlat9' in globals():
+    distance = np.linalg.norm(c9 - p9) + np.linalg.norm(p9 - latlat9)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+print("level 10")
+
+# Calculate Euclidean distance between c10, p10, and gon10
+if 'c10' in globals() and 'p10' in globals() and 'gon10' in globals():
+    distance = np.linalg.norm(c10 - p10) + np.linalg.norm(p10 - gon10)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c10, p10, and med10
+if 'c10' in globals() and 'p10' in globals() and 'med10' in globals():
+    distance = np.linalg.norm(c10 - p10) + np.linalg.norm(p10 - med10)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c10, p10, and lat10
+if 'c10' in globals() and 'p10' in globals() and 'lat10' in globals():
+    distance = np.linalg.norm(c10 - p10) + np.linalg.norm(p10 - lat10)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c10, p10, and latmed10
+if 'c10' in globals() and 'p10' in globals() and 'latmed10' in globals():
+    distance = np.linalg.norm(c10 - p10) + np.linalg.norm(p10 - latmed10)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c10, p10, and latlat10
+if 'c10' in globals() and 'p10' in globals() and 'latlat10' in globals():
+    distance = np.linalg.norm(c10 - p10) + np.linalg.norm(p10 - latlat10)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+
+
+
+print("Special points")
+
+# Calculate Euclidean distance between csemi, semi
+if 'csemi' in globals() and 'semi' in globals():
+    distance = np.linalg.norm(csemi - semi)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between capo, apo
+if 'capo' in globals() and 'apo' in globals():
+    distance = np.linalg.norm(capo - apo)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between csplit, split
+if 'csplit' in globals() and 'split' in globals():
+    distance = np.linalg.norm(csplit - split)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between clatsplit, latsplit
+if 'clatsplit' in globals() and 'latsplit' in globals():
+    distance = np.linalg.norm(clatsplit - latsplit)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+
+

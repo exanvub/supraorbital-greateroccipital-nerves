@@ -19,8 +19,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 #src = mlab.pipeline.open("3D-models/model-122/Segmentation_122.stl")
 #src = mlab.pipeline.open("3D-models/model-158/Segmentation_158.stl")
 #src = mlab.pipeline.open("3D-models/model-197/Segmentation_197.stl")
-#src = mlab.pipeline.open("3D-models/model-183/Segmentation_183.stl")
-src = mlab.pipeline.open("/Users/nicolas/Library/CloudStorage/OneDrive-VrijeUniversiteitBrussel/Github/exanvub/supraorbital-greateroccipital-nerves/3D-models/model-157/Segmentation_157.stl")
+src = mlab.pipeline.open("3D-models/model-183/Segmentation_183.stl")
+# src = mlab.pipeline.open("/Users/nicolas/Library/CloudStorage/OneDrive-VrijeUniversiteitBrussel/Github/exanvub/supraorbital-greateroccipital-nerves/3D-models/model-157/Segmentation_157.stl")
 #src = mlab.pipeline.open("/Users/nicolas/Library/CloudStorage/OneDrive-VrijeUniversiteitBrussel/Github/exanvub/supraorbital-greateroccipital-nerves/3D-models/model-183/Segmentation_183.stl")
 
 # List of file names to process
@@ -33,10 +33,10 @@ file_names = [
 			#'122 occip',
 			#'158 occip',
 			#'197 occip',
-			#'183 occip_mean',
+			'183 occip_mean',
 			#'183 occip_ORIG',
 			#'183 occip_ORIG(2)',
-			'157 occip',
+			# '157 occip',
 
 	    ]
 
