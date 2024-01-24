@@ -3,7 +3,7 @@ import numpy as np
 
 
 # Load JSON data from file
-with open('/Users/nicolas/Library/CloudStorage/OneDrive-VrijeUniversiteitBrussel/Onderzoek/n supraorbi occipitalis major/3D-models/Full Tori GON/103-Full-Tori-GON-R.mrk.json', 'r') as file:
+with open('/Users/nicolas/Library/CloudStorage/OneDrive-VrijeUniversiteitBrussel/Onderzoek/n supraorbi occipitalis major/3D-models/Full Tori GON/103-Full-Tori-GON-L.mrk.json', 'r') as file:
     data = json.load(file)
 
 # Extract markups data
@@ -512,7 +512,7 @@ else:
 
 
 
-print("Special points")
+print("From sagital torus")
 
 # Calculate Euclidean distance between csemi, semi
 if 'csemi' in globals() and 'semi' in globals():
@@ -541,6 +541,37 @@ if 'clatsplit' in globals() and 'latsplit' in globals():
     print(f"{distance}")
 else:
     print(f"not defined")
+
+print("From EOP torus")
+
+# Calculate Euclidean distance between c0 and csemi
+if 'c0' in globals() and 'csemi' in globals():
+    distance = np.linalg.norm(c0 - csemi)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c0 and capo
+if 'c0' in globals() and 'capo' in globals():
+    distance = np.linalg.norm(c0 - capo)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c0 and csplit
+if 'c0' in globals() and 'csplit' in globals():
+    distance = np.linalg.norm(c0 - csplit)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
+# Calculate Euclidean distance between c0 and clatsplit
+if 'c0' in globals() and 'clatsplit' in globals():
+    distance = np.linalg.norm(c0 - clatsplit)
+    print(f"{distance}")
+else:
+    print(f"not defined")
+
 
 
 
