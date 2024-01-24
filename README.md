@@ -2,6 +2,9 @@
 
 This repository is an extension to an anatomy article that describes the morphology of the supraorbital and greater occipital nerves using 3D registrations and visualization. It includes 3D models of CT-scan skulls with the associated nerves projected on them, as well as source code and documentation related to the generation of these models and calculations of nerve morphology.
 
+![Figure_1](src/Skull-projections/Figure_1.jpg)
+![Figure_2](src/Skull-projections/Figure_2.jpg)
+
 ## Folder Structure
 
 The repository consists of the following folders:
